@@ -1,6 +1,7 @@
 import { FaCompass } from "react-icons/fa";
+import { Link, Navigate } from "react-router-dom";
 
-function ProjectCard({ img, name, description, github, live }) {
+function ProjectCard({ img, name, description, source, live }) {
   return (
     <div className="flex flex-col gap-4 -mt-8">
       <div
@@ -12,14 +13,22 @@ function ProjectCard({ img, name, description, github, live }) {
           {name}
         </h2>
         <p>{description}</p>
-        <button className="w-max mx-auto group flex px-4 py-2 items-center gap-2 border-2 rounded-full font-medium border-black">
+        <a
+          href={live}
+          target="_blank"
+          className="w-max mx-auto group flex px-4 py-2 items-center gap-2 border-2 rounded-full font-medium border-black"
+        >
           <FaCompass className="text-3xl group-hover:text-gray-500" />
           <span className="text-xl">Live Demo</span>
-        </button>
-        <button className="w-max mx-auto group flex px-4 py-2 items-center gap-2 border-2 rounded-full font-medium border-black">
+        </a>
+        <a
+          href={source}
+          target="_blank"
+          className="w-max mx-auto group flex px-4 py-2 items-center gap-2 border-2 rounded-full font-medium border-black"
+        >
           <FaCompass className="text-3xl group-hover:text-gray-500" />
           <span className="text-xl">Source Code</span>
-        </button>
+        </a>
       </div>
     </div>
   );

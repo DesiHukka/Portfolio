@@ -5,6 +5,8 @@ const projects = [
     id: 1,
     img: "stayez.jpg",
     name: "Stay-Ez",
+    live: "https://stay-ez.vercel.app/",
+    source: "https://github.com/DesiHukka/StayEZ",
     description:
       "Stay-Ez is an Airbnb-style online marketplace allowing users to book short-term rentals like houses, apartments, or single rooms worldwide.",
   },
@@ -12,6 +14,8 @@ const projects = [
     id: 2,
     img: "blogger.jpg",
     name: "Blogger",
+    live: "https://blogger-two-tan.vercel.app/",
+    source: "https://github.com/DesiHukka/BlogCMS",
     description:
       "Blogger is a content management system for blogs, providing modern tools for creating and managing high-quality articles.",
   },
@@ -34,6 +38,8 @@ function Projects() {
               img={project.img}
               name={project.name}
               description={project.description}
+              live={project.live}
+              source={project.source}
             />
           </div>
         ))}
