@@ -33,7 +33,10 @@ function Navbar() {
             <span>Projects</span>
             <span className="w-0 h-1 absolute top-full left-0 bg-purple-500 group-hover:w-full transition-all duration-300"></span>
           </Link>
-          <Link className="relative group flex gap-2 items-center hover:text-white text-gray-400 font-bold max-sm:text-lg text-2xl lg:text-3xl">
+          <Link
+            to={"/resume"}
+            className="relative group flex gap-2 items-center hover:text-white text-gray-400 font-bold max-sm:text-lg text-2xl lg:text-3xl"
+          >
             <BiSolidNotepad className="max-sm:hidden" />
             <span>Resume</span>
             <span className="w-0 h-1 absolute top-full left-0 bg-purple-500 group-hover:w-full transition-all duration-300"></span>
